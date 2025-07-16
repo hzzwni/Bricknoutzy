@@ -1,0 +1,340 @@
+@charset "utf-8";
+
+/* Font Custom */
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('../font/PressStart2P.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaf2ce;
+}
+
+/* Background image with opacity */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/lego/bg1.jpg') no-repeat center center / cover;
+  opacity: 0.15;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Special Title */
+.special-title {
+  font-family: 'PressStart2P', monospace;
+  font-size: 4rem;
+  text-align: center;
+  color: #ffd500;
+  text-shadow:
+    -4px -3px 0 #bd9e00,
+     1px -1px 0 #bd9e00,
+    -3px  1px 0 #bd9e00,
+     2px  3px 0 #bd9e00,
+     2px  2px 5px rgba(189, 158, 0, 0.5);
+  margin: 35px auto;
+  display: block;
+  letter-spacing: 9px;
+  margin-top: 80px;
+}
+
+.bawah-title {
+  font-family: 'PressStart2P', monospace;
+  font-size: 2rem;
+  text-align: left;
+  color: #ffd500;
+  text-shadow:
+    -4px -3px 0 #bd9e00,
+     1px -1px 0 #bd9e00,
+    -3px  1px 0 #bd9e00,
+     2px  3px 0 #bd9e00,
+     2px  2px 5px rgba(189, 158, 0, 0.5);
+  padding-left: 320px;
+  display: block;
+  letter-spacing: 9px;
+}
+
+.second-title {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  color: #333;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #bfe79c;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 50px;
+}
+
+.logo {
+  height: 45px;
+}
+
+.nav-group {
+  display: flex;
+  gap: 200px;
+  margin-left: 160px;
+  margin-right: 150px;
+  align-items: center;
+}
+
+.nav-group a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  padding: 2px 13px;
+  line-height: 2;
+}
+
+.nav-group a:hover {
+  background-color: #fff475;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.brick-card {
+  text-align: center;
+}
+
+.brick-frame {
+  background-color: #fff;
+  padding: 10px;
+  border: 10px solid #ffc0e4;
+  border-top: 30px solid #f79ad3;
+  border-bottom: 30px solid #f79ad3;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	
+}
+
+.brick-frame img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.brick-frame img:hover {
+  transform: scale(1.03);
+}
+
+.brick-frame .label {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  display: block;
+  margin: 60px auto;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  z-index: 1001;
+}
+
+.close:hover {
+  color: #ffd500;
+  transform: scale(1.2);
+}
+
+footer {
+  background-color: #bfe79c;
+  background-image: url; /* tukar ikut fail kamu */
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+/* Kiri */
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+/* Kanan - Grid 2 Baris × 3 Kolum */
+.footer-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 40px;
+  justify-items: start;
+}
+
+.footer-links-grid a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-links-grid a:hover {
+  color: #444;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding-left: 40px;
+}
+
+.footer-desc {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+.footer-line {
+  border: none;
+  height: 2px;
+  background-color: #91bb6c;
+  margin: 30px auto 15px auto;
+  width: 90%;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 10px 40px;
+}
+
+.social-icons a img {
+  width: 30px;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+}
+
+.social-icons a {
+  display: inline-block;
+  line-height: 0; /* Tambah ni untuk buang ruang kosong bawah icon */
+}
+.copyright {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Fix navbar supaya align full width dan center */
+.navbar {
+  width: 100vw;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.nav-group {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 40px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin: 0 auto; /* buang margin kiri-kanan yang kacau */
+  gap: 40px; /* boleh adjust kalau nak renggangkan */
+}
+
+.nav-group a,
+.nav-group img.logo {
+  flex-shrink: 0;
+  white-space: nowrap;
+}

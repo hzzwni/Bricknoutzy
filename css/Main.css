@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {background-color:#CDEDB3;}
+#Wrapper {width:900px; margin:0px auto; background-color:white;}
+
+#SuperWrapper {width:1000px; margin:0px auto; background-color:white;}
+#Logo {float:left;}
+
+#Icon {float:right;}
+
+#navigasion {clear:both; word-spacing:40px; border-top: solid black 1px; border-bottom: solid black 1px; margin-bottom:10px; padding: 10px; font-size:12px; font-family: Arial;}
+
+#navigasion a:link {color:black;}
+#navigasion a:visited {color:black;}
+#navigasion a:hover {color:#1E4FFF;}
+#navigasion a {text-decoration-line: none;}
+
+
+#Kotak1 {float: left; width:700px;}
+#Kotak1 h1 {color:#f90; border-bottom:solid black 0.5px; padding-bottom:10px; font-family:Arial; font-size:20px;}
+#Kotak1 img {margin:10px; border: solid black 0.5px; padding:10px; border-bottom:solid black 0.5px;padding:10px;}
+
+#Kanan {float:right;width:180px; margin-left:10px;}
+#Kanan h3 {margin-bottom:-15px; color:#f90;font-size:12px;font-family: Arial;}
+#Kanan h2 {font-size:20px;font-family: Arial;}
+
+
+#Footer{clear:both;padding:5px; margin-left:-5px; margin-left:-5px; border-top: solid black 1px; text-align: center;} 
+
+

@@ -1,0 +1,481 @@
+@charset "utf-8";
+
+/* Font Custom */
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('../font/PressStart2P.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaf2ce;
+}
+
+/* Background image with opacity */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/lego/bg1.jpg') no-repeat center center / cover;
+  opacity: 0.15;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Special Title - Pixel Font */
+.special-title {
+  font-family: 'PressStart2P', monospace;
+  font-size: 4rem;
+  text-align: center;
+  color: #ffd500;
+  text-shadow:
+    -4px -3px 0 #bd9e00,
+     1px -1px 0 #bd9e00,
+    -3px  1px 0 #bd9e00,
+     2px  3px 0 #bd9e00,
+     2px  2px 5px rgba(189, 158, 0, 0.5);
+  margin: 35px auto;
+  display: block;
+  letter-spacing: 9px;
+  margin-top: 80px;
+}
+
+/* Bawah Title */
+.bawah-title {
+  font-family: 'PressStart2P', monospace;
+  font-size: 2rem;
+  text-align: left;
+  color: #ffd500;
+  text-shadow:
+    -4px -3px 0 #bd9e00,
+     1px -1px 0 #bd9e00,
+    -3px  1px 0 #bd9e00,
+     2px  3px 0 #bd9e00,
+     2px  2px 5px rgba(189, 158, 0, 0.5);
+  padding-left: 320px;
+  display: block;
+  letter-spacing: 9px;
+}
+
+/* Subtitle */
+.second-title {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  color: #ca0101;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.third-title {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  color: #333;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #bfe79c;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 50px;
+}
+
+.logo {
+  height: 45px;
+}
+
+.nav-group {
+  display: flex;
+  gap: 200px;
+  margin-left: 160px;
+  margin-right: 150px;
+  align-items: center;
+}
+
+.nav-group a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  padding: 2px 13px;
+  line-height: 2;
+}
+
+/* Tambahan: Hover effect */
+.nav-group a:hover {
+  background-color: #fff475;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Title Section */
+.title {
+  background-color: rgba(255, 192, 203, 0.8);
+  color: white;
+  padding: 10px 50px;
+  margin-left: 50px;
+  display: inline-block;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 2rem;
+  color: #ffc801;
+  margin: 30px 0 10px;
+}
+
+/* Slider Container */
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  background: linear-gradient(to right, #ffd837, #a8dfff);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Slide Style */
+.slide {
+  display: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+  box-sizing: border-box;
+}
+
+.slide.active {
+  display: flex;
+}
+
+/* Slide Left Content */
+.slide-left {
+  width: 50%;
+  color: #222;
+}
+
+.slide-left .logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: -30px;
+	margin-top: -80px;
+}
+
+.slide-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+	margin-top: 40px;
+	margin-left: 70px;
+  font-family: 'PressStart2P', monospace;
+  color: #B72224;
+}
+
+.slide-left p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
+	margin-left: 70px;
+	font-family: 'Myriad Pro',;
+}
+.buy-btn { 
+  padding: 12px 30px;
+  background-color: #ffa3d1;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-left: 70px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.buy-btn:hover {
+  background-color: #ffb6dd; /* lebih terang bila hover */
+  text-decoration: none;
+}
+
+
+/* Slide Right Image */
+.slide-right {
+  width: 50%;
+  text-align: right;
+}
+
+.slide-right img {
+  width: 80%;
+  max-height: 350px;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.slide-right img:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 100;
+  color: #333;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.arrow:hover {
+  background: #fff;
+}
+
+.arrow.prev {
+  left: 10px;
+}
+
+.arrow.next {
+  right: 10px;
+}
+
+/* Dots */
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+}
+
+.dot {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #ffb400;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: flex; /* atau block, ikut layout kamu */
+}
+
+
+/* Gaya khas untuk slide ke-2 */
+.second-slide {
+  background-image: linear-gradient(to right, #a8dfff, #ffd7fb);
+  padding: 40px 60px; /* match padding dengan slide lain */
+  box-sizing: border-box;
+}
+
+/* Besarkan gambar dalam slide ke-2 */
+.second-slide .slide-right img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+
+/* Optional: Zoom-in sikit bila hover */
+.second-slide .slide-right img:hover {
+  transform: scale(1.05);
+}
+
+.third-slide {
+  background-image: linear-gradient(to right, #ffd7fb, white);
+  padding: 40px 60px; /* match padding dengan slide lain */
+  box-sizing: border-box;
+}
+	
+.fourth-slide {
+  background-image: linear-gradient(to right, white, #ff7a7a);
+  padding: 40px 60px; /* match padding dengan slide lain */
+  box-sizing: border-box;
+
+}
+.fifth-slide {
+  background-image: linear-gradient(to right, #ff7a7a, #fff5c2);
+  padding: 40px 60px; /* match padding dengan slide lain */
+  box-sizing: border-box;
+
+}
+
+footer {
+  background-color: #bfe79c;
+  background-image: url; /* tukar ikut fail kamu */
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+/* Kiri */
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+/* Kanan - Grid 2 Baris × 3 Kolum */
+.footer-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 40px;
+  justify-items: start;
+}
+
+.footer-links-grid a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-links-grid a:hover {
+  color: #444;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding-left: 40px;
+}
+
+.footer-desc {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+.footer-line {
+  border: none;
+  height: 2px;
+  background-color: #91bb6c;
+  margin: 30px auto 15px auto;
+  width: 90%;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 10px 40px;
+}
+
+.social-icons a img {
+  width: 30px;
+  margin-left: 15px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+}
+
+.social-icons a {
+  display: inline-block;
+  line-height: 0; /* Tambah ni untuk buang ruang kosong bawah icon */
+}
+.copyright {
+  font-size: 14px;
+  color: #333;
+}
+
+
+
+/* Fix navbar supaya align full width dan center */
+.navbar {
+  width: 100vw;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.nav-group {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 40px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin: 0 auto; /* buang margin kiri-kanan yang kacau */
+  gap: 40px; /* boleh adjust kalau nak renggangkan */
+}
+
+.nav-group a,
+.nav-group img.logo {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
